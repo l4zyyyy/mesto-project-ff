@@ -16,7 +16,7 @@ export function createCard(cardData, onDelete, onLike, onImageClick) {
   const likeButton = cardElement.querySelector('.card__like-button');
 
   cardImage.src = cardData.link;
-  cardImage.alt = cardData.name;
+  cardImage.alt = `Изображение места: ${cardData.name}`;
   cardTitle.textContent = cardData.name;
 
   deleteButton.addEventListener('click', () => onDelete(cardElement));
