@@ -1,5 +1,5 @@
 export function handleLikeClick(likeButton) {
-  likeButton.classList.toggle('card__like-button-liked');
+  likeButton.classList.toggle('card__like-button_is-active');
 }
 
 export function deleteCard(cardElement) {
