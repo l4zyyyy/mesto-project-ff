@@ -1,22 +1,31 @@
 .profile__image {
-  width: 120px;
-  height: 120px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  position: relative;
   background-size: cover;
   background-position: center;
-  margin: 0 29px 0 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 740px) {
-  .profile__image {
-    margin: 0 10px 0 0;
-  }
+.profile__image:hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 480px) {
-  .profile__image {
-    margin-right: 0;
-  }
+.profile__edit-avatar {
+  background: url('../../../images/pen.svg') no-repeat center;
+  background-size: 26px 26px;
+  border: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile__image:hover .profile__edit-avatar {
+  opacity: 1;
 }
