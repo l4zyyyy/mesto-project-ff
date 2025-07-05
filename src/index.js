@@ -221,7 +221,7 @@ inputAvatarLink.addEventListener('input', () => {
 editAvatarIcon.addEventListener('click', () => {
   formAvatar.reset();
   hideAvatarError();
-  avatarSaveButton.disabled = true;
+  clearValidation(formAvatar, validationConfig);
   openPopup(popupAvatar);
   inputAvatarLink.focus();
 });
