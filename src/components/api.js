@@ -63,10 +63,7 @@ export const unlikeCard = (cardId) => {
 export const updateAvatar = (avatarUrl) => {
   return fetch(`${config.baseUrl}/users/me/avatar`, {
     method: 'PATCH',
-    headers: {
-      authorization: '29f3746b-5713-4dfa-869d-3b0759e5dbec',
-      'Content-Type': 'application/json',
-    },
+    headers: config.headers,
     body: JSON.stringify({ avatar: avatarUrl }),
   }).then(checkResponse);
 };
